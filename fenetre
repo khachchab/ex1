@@ -1,0 +1,36 @@
+import tkinter as tk
+
+def show_data():
+    pseudo = pseudo_entry.get()
+    mdp = mdp_entry.get()
+    email = email_entry.get()
+    print(f"User: {pseudo}")
+    print(f"Password: {mdp}")
+    print(f"Email: {email}")
+
+# Création de la fenêtre principale
+root = tk.Tk()
+root.title("Inscription")
+
+# Création des labels et des champs d'entrée
+pseudo_label = tk.Label(root, text="Pseudo :")
+pseudo_label.pack()
+pseudo_entry = tk.Entry(root)
+pseudo_entry.pack()
+
+mdp_label = tk.Label(root, text="Mot de passe :")
+mdp_label.pack()
+mdp_entry = tk.Entry(root, show="*")
+mdp_entry.pack()
+
+email_label = tk.Label(root, text="Email :")
+email_label.pack()
+email_entry = tk.Entry(root)
+email_entry.pack()
+
+# Bouton de validation
+validate_button = tk.Button(root, text="Valider l'inscription", command=show_data)
+validate_button.pack()
+
+# Boucle principale
+root.mainloop()
