@@ -1,0 +1,28 @@
+# Fonction pour l'addition
+def addition(n1, n2):
+    return n1 + n2
+
+# Calculatrice
+def calculatrice():
+    operation = input("Entrez l'opération que vous souhaitez effectuer (+, -, *, /): ")
+    nombre1 = float(input("Entrez le premier nombre : "))
+    nombre2 = float(input("Entrez le deuxième nombre : "))
+
+    if operation == '+':
+        resultat = addition(nombre1, nombre2)
+    elif operation == '-':
+        resultat = nombre1 - nombre2
+    elif operation == '*':
+        resultat = nombre1 * nombre2
+    elif operation == '/':
+        if nombre2 != 0:
+            resultat = nombre1 / nombre2
+        else:
+            resultat = "Division par zéro impossible."
+    else:
+        resultat = "Opération non valide."
+
+    print(f"Résultat : {resultat}")
+
+# Utilisation de la calculatrice
+calculatrice()
