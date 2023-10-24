@@ -1,0 +1,20 @@
+nom = input("Entrez votre nom de famille en lettres minuscules : ")
+age = input("Entrez votre âge : ")
+taille = input("Entrez votre taille en mètres : ")
+fruits_prefs = input("Entrez la liste de vos fruits préférés séparés par des virgules : ")
+
+nom_majuscules = nom.upper()
+
+print("\nInformations personnelles :")
+print(f"Nom de famille : {nom_majuscules}")
+print(f"Âge : {age}")
+print(f"Taille : {taille} m")
+
+fruits_liste = fruits_prefs.split(',')
+print("\nListe de fruits préférés :")
+for fruit in fruits_liste:
+    print(fruit.strip())
+
+# Génération de la salutation personnalisée
+salutation_personnalisee = f"Bonjour, je m'appelle {nom_majuscules}. J'ai {age} ans, je mesure {taille} m. Mes fruits préférés sont {', '.join(fruits_liste)}."
+print(f"\n{salutation_personnalisee}")
